@@ -1,0 +1,23 @@
+# theme.toml template for a Hugo theme
+
+name = "Console"
+license = "MIT"
+licenselink = "https://github.com/kyb3rcipher/hugo-theme-console/blob/master/LICENSE"
+description = "A minimal but cute and functional blog/website for Hugo."
+homepage = "https://github.com/kyb3rcipher/hugo-theme-console"
+tags = [
+  "minimal",
+  "blog",
+  "clean",
+  "dark",
+]
+min_version = "0.41.0"
+
+[author]
+  name = "Kyb3r Cipher"
+  homepage = "https://kyb3rcipher.com"
+
+[original]
+  name = "b2a3e8"
+  homepage = "https://github.com/b2a3e8"
+  repo = "https://github.com/b2a3e8/jekyll-theme-console"
