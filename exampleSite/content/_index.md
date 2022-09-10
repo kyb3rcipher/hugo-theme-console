@@ -8,6 +8,7 @@ A minimal but cute and functional blog/website for Hugo.
 * Analytics.
 * Blog/Portafolio
 * Fast setup and deployment.
+* Icons support. (font-awesome, themify and [more](/blog/#))
 
 ## License
 The entire site is open-source under the MIT license.
