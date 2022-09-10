@@ -1,0 +1,40 @@
+baseURL = "/"
+title = "Hugo Console"
+
+# site
+theme = "hugo-theme-console"
+themesDir = "../../"
+enableEmoji = true
+
+# Navbar
+[[menu.main]]
+  name = "Home"
+  url = '/'
+  weight = 1
+[[menu.main]]
+  name = "Blog"
+  url = '/blog'
+  weight = 2
+
+# Site params
+[params]
+  footer = '<a href="/index.xml" target="_blank">rss</a> | © Obi-Wan Kenobi'
+# profiles
+[[params.social]]
+name = "GitHub"
+url = "https://github.com/kyb3rcipher/hugo-theme-console"
+weight = 1
+[[params.social]]
+name = "Original"
+url = "https://github.com/b2a3e8/jekyll-theme-console"
+weight = 2
+
+[markup]
+  [markup.highlight]
+    # noClasses = false
+    anchorLineNos = false
+    lineNos = false
+    lineNumbersInTable = true
+    style = 'dracula'
+  [markup.goldmark.renderer]
+    unsafe= true
