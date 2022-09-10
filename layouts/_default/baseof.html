@@ -1,11 +1,23 @@
+{{- $style := resources.Get "sass/main.scss" | resources.ToCSS -}}
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
+<html lang="en">
+  <head>
+    <title>{{ .Site.Title }}</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+  </head>
+  <body>
+    <div class="container">
+      {{- partial "header.html" . -}}
+
+      <main>
+        {{- block "main" . -}}{{- end -}}
+      </main>
+
+      {{- partial "footer.html" . -}}
+    </div>
+  </body>
 </html>

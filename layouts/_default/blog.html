@@ -1,0 +1,13 @@
+{{- define "main" -}}
+<h1>All posts</h1>
+
+{{- range .RegularPages.GroupByDate "2006" -}}
+<h2>{{ .Key }}</h2>
+  {{- range .Pages -}}
+    <ul>
+      <li>[{{.Date.Format "01-02"}}] <a href="{{.Permalink}}">{{.Title}}</a></li>
+    </ul>
+  {{- end -}}
+{{- end -}}
+
+{{- end -}}

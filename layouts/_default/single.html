@@ -1,0 +1,13 @@
+{{- define "main" -}}
+<!-- <h1 style="text-align: center;">{{ .Title }}</h1> -->
+<h1>{{ .Title }}</h1>
+<p><span class="ti-calendar"></span> {{ .PublishDate.Format "January 2 2006" }} | <span class="ti-bookmark"></span> {{- range (.GetTerms "tags") -}}<a href="{{ .Permalink }}" style="text-decoration: none;">{{ .LinkTitle }} </a>{{= end -}}</p>
+<style>img { width: 100%;} </style>
+{{- if .Params.cover -}}<br><img src="{{ .Params.cover }}"><br>{{- end -}}
+<!-- <aside>
+  <p>{{ with .NextInSection }}<a href="{{ .Permalink }}" style="text-decoration: none;"><span class="ti-angle-left"></span></a>{{ end }} {{ with .PrevInSection }}<a href="{{ .Permalink }}" style="text-decoration: none;"><span class="ti-angle-right"></span></a>{{ end }}
+  </p>
+  {{ .TableOfContents }}
+</aside> -->
+{{ .Content }}
+{{- end -}}

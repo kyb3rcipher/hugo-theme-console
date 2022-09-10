@@ -1,0 +1,21 @@
+{{- define "main" -}}
+<h1>{{- .Params.Name -}}</h1>
+{{ .Content }}
+
+{{- if .Site.Params.social -}}
+<h2>Find me on</h1>
+<ul>
+{{- range .Site.Params.social -}}
+<li><a href="{{ .URL }}" target="_blank">{{ .name }}</a></li>
+{{- end -}}
+</ul>
+{{- end -}}
+
+<h2>Latest posts</h2>
+{{- range ( where .Site.RegularPages "Type" "blog" | first 3 ) -}}
+<ul>
+<li>[{{ .Date.Format "2006-01-02" }}] <a href="{{.Permalink}}">{{.Title}}</a></li>
+</ul>
+{{- end -}}
+
+{{- end -}}
