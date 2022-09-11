@@ -1,7 +1,8 @@
 {{- define "main" -}}
 <!-- <h1 style="text-align: center;">{{ .Title }}</h1> -->
 <h1>{{ .Title }}</h1>
-<p><span class="ti-calendar"></span> {{ .PublishDate.Format "January 2 2006" }} | <span class="ti-bookmark"></span> {{- range (.GetTerms "tags") -}}<a href="{{ .Permalink }}" style="text-decoration: none;">{{ .LinkTitle }} </a>{{= end -}}</p>
+<p>
+{{- if .Params.author -}}<i class="ti ti-user"></i> {{ .Params.author }} | {{- end -}}<i class="ti ti-calendar"></i> {{ .PublishDate.Format "January 2 2006" }} | <i class="ti ti-bookmark"></i> {{- range (.GetTerms "tags") -}}<a href="{{ .Permalink }}" style="text-decoration: none;">{{ .LinkTitle }} </a>{{- end -}} </p>
 <style>img { width: 100%;} </style>
 {{- if .Params.cover -}}<br><img src="{{ .Params.cover }}"><br>{{- end -}}
 <!-- <aside>
