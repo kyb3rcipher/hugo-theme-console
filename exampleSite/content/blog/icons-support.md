@@ -22,7 +22,10 @@ To enable icon support the [@adereksisusanto/icons](https://www.npmjs.com/packag
 * [Weather Icons](http://erikflowers.github.io/weather-icons)
 
 # Use
+Use the `<i>` tag with the icon class, example:
 ```html
 <i class="bi bi-alarm-fill"></i>
 ```
-<i class="bi bi-alarm-fill"></i>
+<br><i class="bi bi-alarm-fill"></i>
+
+**You see the examples in [doc](https://www.npmjs.com/package/@adereksisusanto/icons)**.
